@@ -1,0 +1,24 @@
+# DT Table Rmd
+
+Some text ...
+
+Adding a DT table 
+
+```{r}
+tags$div(
+  DT::renderDataTable(mtcars, filter = list(position = "top", clear = FALSE, plain = TRUE),
+    rownames = FALSE, style = "bootstrap",
+    options = list(
+      dom = "ltip",
+      autoWidth = TRUE,
+      columnDefs = list(list(className = 'dt-center', targets = "_all")),
+      processing = FALSE,
+      lengthMenu = c(10, 20, 50),
+      pageLength = 10
+    )
+), style = "width: 800px; margin-left: auto; margin-right: auto;")
+```
+
+# Conclusion
+
+Some more text ...

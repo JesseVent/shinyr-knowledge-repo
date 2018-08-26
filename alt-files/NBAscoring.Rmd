@@ -1,0 +1,28 @@
+# NBA Scoring Rmd
+
+```{r setup}
+library(knitr)
+library(d3heatmap)
+library(flexdashboard)
+
+url <- "http://datasets.flowingdata.com/ppg2008.csv"
+nba_players <- read.csv(url, row.names = 1)
+```
+
+### Stats by Player
+
+```{r heatmap}
+
+tags$div(d3heatmap::renderD3heatmap({
+  d3heatmap::d3heatmap(nba_players, scale = "column")
+})
+)
+
+```
+
+### Top Scorers
+
+```{r scorers}
+knitr::kable(nba_players[1:20,c("G", "MIN", "PTS")])
+```
+
