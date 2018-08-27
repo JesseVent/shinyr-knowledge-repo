@@ -1,4 +1,4 @@
-# The Knowledge Repo
+# ShinyR Knowledge Repo
 
 ## The **shinyR** curated knowledge sharing platform
 
