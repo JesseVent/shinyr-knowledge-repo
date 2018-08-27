@@ -1,33 +1,15 @@
-# Functionplot Rmd
+# Render Plot Rmd
 
 Some text ...
 
 ## The widget
 
 ```{r echo = FALSE, screenshot.force = FALSE}
-# devtools::install_github("timelyportfolio/functionplotR")
-library(functionplotR)
-div(functionplotR::renderFunctionplot({
-  functionplotR::functionplot(
-    disableZoom = TRUE,
-    xLabel = "Price",
-    yLabel = "Profit",
-    tip = list(
-      xLine = TRUE,
-      yLine = TRUE
-    ),
-    fn = list(
-      list(
-        fn = "-10*x^2+120*x-200", color = "black",
-        derivative = list(
-          fn = "-20*x+120",
-          updateOnMouseMove = TRUE
-        )
-      )
-    ),
-    xDomain = c(0, 13),
-    yDomain = c(-200, 200)
-  )
-}), style = "width: 800px; margin-left: auto; margin-right: auto;")
+div(renderPlot({
+      input$newplot
+      # Add a little noise to the cars data
+      cars2 <- cars + rnorm(nrow(cars))
+      plot(cars2)
+    }), style = "width: 800px; margin-left: auto; margin-right: auto;")
 ```
 

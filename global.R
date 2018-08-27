@@ -6,6 +6,8 @@ library(shinydashboard)
 library(markdown)
 library(purrr)
 library(rlang)
+library(htmlwidgets)
+library(d3heatmap)
 
 ## options for knitting/rendering rmarkdown chunks
 knitr::opts_chunk$set(echo = FALSE, comment = NA, cache = FALSE,
@@ -86,7 +88,6 @@ getdeps <- function() {
   htmltools::attachDependencies(
     htmltools::tagList(),
     c(
-      htmlwidgets:::getDependency("functionplot","functionplotR"),
       htmlwidgets:::getDependency("datatables","DT"),
       htmlwidgets:::getDependency("d3heatmap","d3heatmap")
     )
