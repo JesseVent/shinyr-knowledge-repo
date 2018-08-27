@@ -16,9 +16,8 @@ Through the reticulate package it can even run embedded python chunks inside `RM
 
 This application is loosely inspired from a mix of the principles of [Airbnb's Knowledge Repo](https://github.com/airbnb/knowledge-repo) and the user interface from [GetGrav's Learn2](https://github.com/getgrav/grav-theme-learn2) with my own spin on my thought's about what a knowledge repo should be, combined with some functionality that **Shiny** brings together so well.
 
-> The Knowledge Repo project is focused on facilitating the sharing of knowledge between data scientists and other technical roles using data formats and tools that make sense in these professions. It provides various data stores (and utilities to manage them) for "knowledge posts", with a particular focus on notebooks (R Markdown and Jupyter / IPython Notebook) to better promote reproducible research. [^59f65d82]
+> The Knowledge Repo project is focused on facilitating the sharing of knowledge between data scientists and other technical roles using data formats and tools that make sense in these professions. It provides various data stores (and utilities to manage them) for "knowledge posts", with a particular focus on notebooks (R Markdown and Jupyter / IPython Notebook) to better promote reproducible research. [Airbnbs Description](https://github.com/airbnb/knowledge-repo)
 
-[^59f65d82]&#x3A; [As Airbnb capture perfectly on their page](https://github.com/airbnb/knowledge-repo)
 
 ![](/www/3.png)
 
@@ -30,7 +29,7 @@ The following dependencies are required.
 pkgs <- c('shiny', 'tidyverse', 'knitr', 'DT', 'shinydashboard', 'markdown', 'purrr', 'rlang', 'functionplotR', 'd3heatmap')
 install.packages(pkgs)
 
-# Clone the github repo and then use `RunApp()`
+shiny::runApp()
 ```
 
 The default is to list any markdown files sitting in the source folder, or beneath it. This can easily be changed to look at any directory you wish by providing the path of the directory you wish to use.
@@ -55,7 +54,7 @@ The titles that display in the sidebar are equivalent to the first line in the m
     ## Subtitle
     <Rest of your content>
 
-![](/www/1.png)
+![](/www/4.png)
 
 ## Next Steps
 
