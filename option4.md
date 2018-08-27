@@ -1,4 +1,4 @@
-# Option 4
+# Option 4 !2.5 Testing Overly Long Invalid Font@#@#$523424
 
 Available as `stat_calendar_heatmap` and `ggplot_calendar_heatmap`.
 
